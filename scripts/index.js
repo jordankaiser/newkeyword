@@ -1,3 +1,13 @@
-import { aPromise } from "./features/promises/promises.js";
+import { aPromise, timer } from "./features/promises/promises.js";
 
-console.log(aPromise);
+aPromise()
+  .then((result) => {
+    console.log('Promise handle 2 - ' + result);
+  })
+  .catch((error) => {
+    console.log('Promise handle 2 - ' + error);
+  })
+  .finally(() => {
+    console.log('finaly')
+    clearInterval(timer);
+  });
