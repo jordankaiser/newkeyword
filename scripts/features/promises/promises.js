@@ -1,1 +1,1 @@
-export const aPromise = 'a promise';
+export const aPromise = Promise.resolve(123);
